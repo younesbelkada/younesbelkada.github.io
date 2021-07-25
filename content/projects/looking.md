@@ -4,8 +4,10 @@ date: 2021-07-25
 categories: ["Projects"]
 ---
 
-### **Are you looking at the camera ? A study case for in-the-wild eye contact detection**
-#### July 2021
+![The method performs in-the-wild eye-contact detection for autonomous agents-pedestrians interaction context](/images/projects/looking.png)
 
-![](looking.png)
-Image taken from : https://jooinn.com/people-walking-on-pedestrian-lane-during-daytime.html 
+<img class="special-img-class" style="width:100%" src="/images/projects/looking.png" />
+
+##### Image taken from [here](https://jooinn.com/people-walking-on-pedestrian-lane-during-daytime.html)
+
+Coming soon ...

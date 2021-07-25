@@ -45,9 +45,9 @@ disqusShortname = "yourdiscussshortname"
     weight = 4
 
 [params]
-    since = 2012
-    author = "Fastbyte01"               # Author's name
-    subtitle = "A Hugo theme"       # Subtitle
+    since = 2021
+    author = "younesbelkada"               # Author's name
+    subtitle = "younesbelkada's blog"       # Subtitle
     cdn_url = ""           # Base CDN URL
     home_mode = "" # post or other
     dateFormatToUse = "" # set date format, default "2 January 2006"
