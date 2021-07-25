@@ -30,6 +30,7 @@ Fortunately, there is a high excitement around text detection algorithms using D
 ![Pipeline of CRAFT](/images/projects/craft.png)
 
 Since these models are state-of-the-art models we maximize the chances that at test time, it will handle well the corner cases. In practice, this model worked well on scanned invoices so we have decided to stick with it.
+As stated before, [CRAFT](https://github.com/RubanSeven/CRAFT_keras) was the state-of-the-art at the time we were working on the project, this method can be implmented using current state-of-the-art models.
 
 ### ***What is next ?***
 
