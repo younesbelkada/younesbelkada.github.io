@@ -11,6 +11,7 @@ title = "Introduction aux modèles (Hu)go"
 type = ["posts","post"]
 [ author ]
   name = "Michael Henderson"
+draft = "yes"
 +++
 
 Hugo utilise l'excellente librairie [go][] [html/template][gohtmltemplate] pour

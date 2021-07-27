@@ -16,6 +16,7 @@ categories = [
 series = ["Hugo 101"]
 [ author ]
   name = "Hugo Authors"
+draft = "yes"
 +++
 
 ## Step 1. Install Hugo
