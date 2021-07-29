@@ -29,6 +29,8 @@ This model can achieve impressive results and these methods may be already in us
 
 # Overview of the pipeline
 
+Alice and Bob needs first to agree on the same Language Model and on the same preconditioning of the LM. This is a pre-required condition before running this protocol. 
+
 ![](/images/projects/stego.png)
 
 # Code

@@ -34,3 +34,4 @@ As stated before, [CRAFT](https://github.com/RubanSeven/CRAFT_keras) was the sta
 
 ### ***What is next ?***
 
+The idea of the paper is to deploy a hierarchical AI-based solution for that. If you are curious about the method and know more about it, please visit [this website](https://link.springer.com/article/10.1007/s11036-021-01759-9) and request for a full version of the paper. 
