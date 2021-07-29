@@ -1,8 +1,7 @@
 ---
-title: To be released soon
+title: In the wild eye contact detection for Autonomous Vehicles
 date: 2021-07-25
 categories: ["Projects"]
 ---
 
-
-Coming soon ...
+![The method performs in-the-wild eye contact detection](/images/projects/looking.png)
