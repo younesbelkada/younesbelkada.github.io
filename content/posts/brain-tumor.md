@@ -6,6 +6,7 @@ type:
 - posts
 title: Challenge '#1 Brain Tumor classification on Kaggle
 weight: 10
+categories: ["Challenges"]
 ---
 
 ![Source of the image: https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification/overview](/images/projects/brain.png)
