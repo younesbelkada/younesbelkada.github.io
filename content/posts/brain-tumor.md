@@ -91,6 +91,7 @@ As stated before, for me the main challenge is to understand how to train a mode
 * Use the mean image per subfolder and pass it to a *ResNet* or an *EfficientNet*
 * Take a random image and pass it to the model
 * Transform each image to another space and pass it to a Sequential model (RNN, LSTM)
+* Transform each image into a 4d tensor and make use of 3d convolutional models
 
 Intuitively I would go for the third option. The risk of losing crucial information is extremely high if we decide to go for the first 2 directions. We may use these 2 options as a baseline and compare it against the approach 3.
 

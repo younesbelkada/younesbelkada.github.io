@@ -35,4 +35,4 @@ Alice and Bob needs first to agree on the same Language Model and on the same pr
 
 # Code
 
-The code is available online [here](https://github.com/younesbelkada/stego_ml) as well as the report that can be found [here](/files/MLCourse_2.pdf)
+The code is available online [here](https://github.com/younesbelkada/stego_ml) as well as the report that can be found [here](/file/MLCourse_2.pdf)
