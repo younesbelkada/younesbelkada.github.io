@@ -19,7 +19,8 @@ The project looks quite exciting, with a serious and challenging application on 
 
 # Project overview
 
-The goal is to accurately predict if the patient is victim of a malignant tumor, given a set of different scan of the brain scan taken with 4 different image types called structural multi-parametric MRI (mpMRI) scans. The problem can be tackled in several ways that we will try to explore as much as we can !
+The goal is to accurately predict if the patient which is victim of a malignant tumor has a presence of MGMT promoter methylation, given a set of different scan of the brain scan taken with 4 different image types called structural multi-parametric MRI (mpMRI) scans. This diagnose would help the doctors on which direction to go about the treatement of the patient.
+The problem can be tackled in several ways that we will try to explore as much as we can !
 
 
 ### The dataset
@@ -82,7 +83,7 @@ The main goal can be summarized as follows: perform binary classification given 
 
 The goal is a bit tricky. ***Why?***
 
-Because classicaly, when performing binary classification the input is a single image (e.g. Dogs and Cat classification), in this case the input would be a set of ***arbitrary number of images***, and the output is whether the tumor is present in the scans or not.
+Because classicaly, when performing binary classification the input is a single image (e.g. Dogs and Cat classification), in this case the input would be a set of ***arbitrary number of images***, and the prediction would be the presence of MGMT promoter methylation. If successful, this would help brain cancer patients receive less invasive diagnoses and treatments. 
 
 #### The challenges
 
