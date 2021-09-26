@@ -4,7 +4,7 @@ date: 2021-07-27
 type:
 - post 
 - posts
-title: Challenge '#1 Brain Tumor classification on Kaggle
+title: Challenge 1 - Brain Tumor classification on Kaggle
 weight: 10
 categories: ["Challenges"]
 ---
@@ -89,12 +89,11 @@ Because classicaly, when performing binary classification the input is a single 
 
 As stated before, for me the main challenge is to understand how to train a model that deals with this additional constraint of the different number of frames per subfolder. Different directions can be discussed:
 
-* Use the mean image per subfolder and pass it to a *ResNet* or an *EfficientNet*
+* Use the mean image per subfolder and train a model using the mean image
 * Take a random image and pass it to the model
 * Transform each image to another space and pass it to a Sequential model (RNN, LSTM)
 * Transform each image into a 4d tensor and make use of 3d convolutional models
 
-Intuitively I would go for the third option. The risk of losing crucial information is extremely high if we decide to go for the first 2 directions. We may use these 2 options as a baseline and compare it against the approach 3.
 
 # Our implementation
 
