@@ -25,7 +25,7 @@ Does the AI needs to be end-to-end? (***Directly from the video to the score***)
 
 Given the lack (or the inexistence) of a labeled data for this task, the problematic became very challenging but exciting. We had to create a custom dataset by involving staff members from the lab and hard work since we had to label each frame from each video. 
 
-The project's main problematic has rapidly became ***Can we create an AI that scores a fitness movement?*** to ***Is Deep Learning well adapted to classify and score a movement?***
+The project's main problematic has rapidly became ***Can we create an AI that classifies and scores a fitness movement?*** to ***Is Deep Learning well adapted to score a movement?***
 
 ### Transforming the input into another space
 
@@ -39,6 +39,15 @@ This approach to tackle the problem seemed perfect to us. OpenPose was state-of-
 
 ### Deal with different numbers of frames
 
+Each frame is now expressed into a vector of size 30. A video is a concatenation of frames, thus can be expressed with a concatenation of generated vectors. How to deal with inconsitent number of frames accross each video? By just applying a fixed zero-padding on those tensors. Let's assume the maximum number of frames accross all videos is *N*. Then each video would have a size *(30xN)* and the irregular videos will be zero-padded.
+
+# Implementations
+
+After manually labelling the data and transforming each video into a *(30xN)* dimensional tensor we have tried several approaches to output a score given the tensors.
+
+### Score predictor as a 1D-CNN
+
+![Overview of a 1D-CNN applied to text data - Source: cezannec.github.io/ ](/images/projects/conv_1D_time.gif)
 
 
 # Conclusion
