@@ -45,12 +45,22 @@ Each frame is now expressed into a vector of size 30. A video is a concatenation
 
 After manually labelling the data and transforming each video into a *(30xN)* dimensional tensor we have tried several approaches to output a score given the tensors.
 
+Each *30-dimensional* vector is concatenated in the horizontal direction. Arranging the data like the following is similar to having a sequential data where each column corresponds to a specific timestep.
+
+
 ### Score predictor as a 1D-CNN
+
+The 1-dimensional filter can learn the linear correlation between each joint at each time step.
 
 ![Overview of a 1D-CNN applied to text data - Source: cezannec.github.io/ ](/images/projects/conv_1D_time.gif)
 
 
+### Score predictor as a simple LSTM model
+
+It is a common practice in the Deep Learning litterature to use a LSTM model when dealing with sequential data.
+
+![Overview of a LSTM model ](/images/projects/lstm.gif)
+
 # Conclusion
 
-* Pas de end to end for more robust AI
-* Break down the problem into tiny problems
+* Trying to have an end-to-end AI is extremely difficult if we want to deploy a robust AI. Breaking down the problem into smaller problems can help and must be considerd.
