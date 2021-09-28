@@ -15,5 +15,3 @@ Younes' interests focuses on Deep Learning applied to exciting real-world proble
 * Human pose estimation 
 * Unsupervised Learning
 * Autonomous driving
-* 
-
