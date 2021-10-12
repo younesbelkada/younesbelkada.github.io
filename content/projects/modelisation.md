@@ -2,6 +2,7 @@
 title: Mathematic Modelling of Natural Selection phenomena
 date:   2018-12-24 20:26:19 +0200
 categories: ["Projects"]
+comment: false
 ---
 
 ### Problem statement

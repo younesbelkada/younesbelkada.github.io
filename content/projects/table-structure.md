@@ -3,6 +3,7 @@ title: An unsupervised method for table structure recognition
 date:   2019-08-31 20:26:19 +0200
 author: "Younes Belkada & Arthur Zucker"
 categories: ["Projects"]
+comment: false
 ---
 
 ### Problem statement
