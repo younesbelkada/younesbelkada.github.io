@@ -97,4 +97,4 @@ As stated before, for me the main challenge is to understand how to train a mode
 
 # Our implementation
 
-To be released soon !
+Following this [github repo](https://github.com/younesbelkada/BraTS_2021) you can find our implementation of the experiments that we have tried so far. Due to the lack of data (issue that has been raised by the participants of the challenge) we couldn't get an accuracy higher that ~60%. But this project allowed us to try several interesting approahces including a *MLP-Mixer*-like approach to treat the medical images.

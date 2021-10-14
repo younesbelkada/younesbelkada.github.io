@@ -74,7 +74,7 @@ theme = "FeelIt"
       avatarURL = "/images/avatar.png"
       itle = ""
       # subtitle shown in home page
-      subtitle = "younesbelkada's blog"
+      subtitle = "Welcome!"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
