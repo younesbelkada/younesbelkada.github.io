@@ -3,6 +3,12 @@ title: A frist approach for steganography using Language Models
 date: 2020-12-24
 categories: ["Projects"]
 comment: false
+weight: 10
+comment: false
+tags: ['Steganography', 'Deep Learning', 'Language Models']
+featuredImage: ""
+featuredImagePreview: ""
+lightgallery: true
 ---
 
 # Introduction
@@ -13,7 +19,7 @@ This project was conducted upon the [EPFL CS-433 course](https://www.epfl.ch/lab
 
 The principle of Steganography is to hide a secret message inside another message or in an image. These techniques can be used to avoid Man In the Middle (MITM) attacks and send secret messages to a pre-defined receiver. 
 
-![The same image viewed by white, blue, green, and red lights reveals different hidden numbers. Source of the image : Wikipedia](/images/projects/steganography-wiki.png)
+{{< image src="/images/projects/steganography-wiki.png" caption="The same image viewed by white, blue, green, and red lights reveals different hidden numbers." height="300" width="300" title="Source of the image : Wikipedia">}}
 
 In practice, such protocols need to follow a **golden rule**:
 * a common secret needs to be shared before (for the previous image, which color you need to use to reveal the secret image)
@@ -25,15 +31,16 @@ This rule is applied into well-known [symmetric cryptography](https://en.wikiped
 Deep Learning and Steganography seems to be a good match. In 2017, Google releases [Hiding Images in Plain Sight:
 Deep Steganography](https://papers.nips.cc/paper/2017/file/838e8afb1ca34354ac209f53d90c3a43-Paper.pdf) that attempts to hide a secret image into another image of the same size. The method implies 3 networks, 2 neural networks to **encode** the input image and another network to **decode** the encoded image.
 
-![Model architecture of the described method - Figure directly taken from the paper](/images/projects/fig-stego.png)
+{{< image src="/images/projects/fig-stego.png" caption="Model architecture of the described method - Figure directly taken from the paper" height="600" width="600" >}}
 
 More recently [Abhishedk Das et al.](https://arxiv.org/pdf/2101.00350.pdf) proposes a novel way to encode multiple images into a single encoded cover image, and retrieve accurately the multiple images using only the single cover image as an input.
 
-![Model architecture of the described method - Figure directly taken from the paper](/images/projects/fig-stego-2021.png)
+{{< image src="/images/projects/fig-stego-2021.png" caption="Model architecture of the described method - Figure directly taken from the paper" height="600" width="600" >}}
 
 These techiques can achieve impressive results and may be already in use into some real-world applications.
 
-![Qualitative results from the paper 'Multi-Image Steganography Using Deep Neural Networks' by Abhishedk Das et al.](/images/projects/stego-paper-2021.png)
+
+{{< image src="/images/projects/stego-paper-2021.png" caption="Qualitative results from the paper 'Multi-Image Steganography Using Deep Neural Networks' by Abhishedk Das et al." height="400" width="400" >}}
 
 Deep Learning and Steganography are also a good match when it comes to speech data, according to the paper [Hide and Speak: Towards Deep Neural Networks for Speech Steganography](https://arxiv.org/pdf/1902.03083.pdf), but we have struggled (back in 2020!) to find very intersting work matching ***Steganography***, ***Deep Learning*** and ***textual data***. Here came the challenge that drove us and pushed us to pursue the project.
 
@@ -50,7 +57,8 @@ Steganography provides (in theory) the feature of hiding a message into ***anoth
 
 Alice and Bob needs first to agree on the same Language Model and on the same preconditioning of the LM. This is a pre-required condition before running this protocol. 
 
-![](/images/projects/stego.png)
+
+{{< image src="/images/projects/stego.png" caption="General pipeline of the method" height="600" width="600" >}}
 
 # Code
 

@@ -1,0 +1,20 @@
+<footer class="footer">
+    <div class="copyright">
+        &copy;
+        {{ with .Site.Params.since }}
+        <span itemprop="copyrightYear">{{.}} - {{ now.Year }}</span>
+        {{ end }}
+         {{ if .Site.Params.author }}
+            <span class="author" itemprop="copyrightHolder"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.author  }}</a> </span>
+         {{ end }}
+
+    </div>
+    <a title="Real Time Web Analytics" href="http://clicky.com/101337009"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+    <script async src="//static.getclicky.com/101337009.js"></script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101337009ns.gif" /></p></noscript>
+</footer>
+
+
+
+
+{{ partial "js.html" . }}

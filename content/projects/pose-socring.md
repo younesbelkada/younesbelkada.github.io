@@ -3,13 +3,18 @@ title: An approach for fitness exercise scoring using Deep Learning
 date:   2020-05-24 20:26:19 +0200
 categories: ["Projects"]
 comment: false
+tags: ['Human Pose', 'Deep Learning', 'Fitness Exercises']
+featuredImage: ""
+featuredImagePreview: ""
+lightgallery: true
 ---
 
 # Introduction
 
 Imagine a world where (almost) everything is powered by Artificial Intelligence. Today, some signs of an Artifical Intelligence-guided society are coming into existence. Autonomous cars can automately drive you from a point A to a point B, and more recently, Tesla has revealed the ***Tesla Bot***, [the humanoid robot](https://usa.inquirer.net/81836/tesla-bot-everything-you-need-to-know) that will be able to help humans for simple tasks. 
 
-![Elon Musk when revealing the Tesla Bot - August 2021 - Source: autoplus.fr ](/images/projects/Tesla_Bot.png)
+
+{{< image src="/images/projects/Tesla_Bot.png" caption="Elon Musk when revealing the Tesla Bot - August 2021 -" height="600" width="600" title="Source: autoplus.fr" >}}
 
 Apart from having society full of AI-powered robots, back in 2019 when we have starting the project together with my teammates and the laboratory [ISIR](https://www.isir.upmc.fr/) from Sobonne University, we just wanted to ***try*** to tackle to problematic of having an AI-based gym trainer for fitness exercises. 
 
@@ -34,7 +39,8 @@ Having a model that learns everything end-to-end directly from the video is extr
 
 **Long live human poses!** What if we express each frame into only the joints of the person in the video? By doing this, we drastically reduce the amount of data (each frame can be expressed using only 30 data points instead of 3x256 pixels!). Back in 2019, [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) was the state-of-the-art method for 2D human pose estimation model.
 
-![Qualitative results from OpenPose - Source: OpenPose's official repository](/images/projects/pose_face_hands.gif)
+
+{{< image src="/images/projects/pose_face_hands.gif" caption="Qualitative results from OpenPose" height="400" width="500" title="Source: OpenPose's official repository" >}}
 
 This approach to tackle the problem seemed perfect to us. OpenPose was state-of-the-art, time-consistent (consistent results between each frame) and extremly robust since it has been trained on a very large dataset with a wide variety of different people, background images, lighting conditions, etc. In addition, the outputed keypoints can be normalized and the score would be independent to the size of the human, which in practice is the case.
 
@@ -53,14 +59,14 @@ Each *30-dimensional* vector is concatenated in the horizontal direction. Arrang
 
 The 1-dimensional filter can learn the linear correlation between each joint at each time step.
 
-![Overview of a 1D-CNN applied to text data - Source: cezannec.github.io/ ](/images/projects/conv_1D_time.gif)
-
+{{< image src="/images/projects/conv_1D_time.gif" caption="Overview of a 1D-CNN applied to text data" height="500" width="500" title="Source: cezannec.github.io/" >}}
 
 ### Score predictor as a simple LSTM model
 
 It is a common practice in the Deep Learning litterature to use a LSTM model when dealing with sequential data.
 
-![Overview of a LSTM model ](/images/projects/lstm.gif)
+
+{{< image src="/images/projects/lstm.gif" caption="Overview of a LSTM model " height="500" width="500" >}}
 
 # Conclusion
 

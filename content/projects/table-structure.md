@@ -11,7 +11,7 @@ comment: false
 Some organizations still use huge amounts of scanned tables / invoices. Rather than manually typing the contents of the tables into an excel file, one can think of using Deep Learning to tackle this problem.
 Once you identify the distinguishable cells on the tables, we can pass an OCR (Optical Character Recognition) to each cell to read its contents and convert it to an excel file for example.
 
-![The method performs table structure recognition in an unsupervised way](/images/projects/table.png)
+{{< image src="/images/projects/table.png" caption="The method performs table structure recognition in an unsupervised way" height="600" width="600" >}}
 
 Here comes the task of table structure recognition, the main goal would be to efficiently detect the individual cells given an image containing textual information (characters, digits).
 
@@ -28,7 +28,7 @@ Here comes the well-discussed border that lies between the research field and in
 
 Fortunately, there is a high excitement around text detection algorithms using Deep Learning in the litterature and we can take advantage of it. When we were working at this project, [CRAFT](https://github.com/RubanSeven/CRAFT_keras) algorithm was the state-of-the-art text detection algorithm.
 
-![Pipeline of CRAFT](/images/projects/craft.png)
+{{< image src="/images/projects/craft.png" caption="TPipeline of CRAFT" height="600" width="600" >}}
 
 Since these models are state-of-the-art models we maximize the chances that at test time, it will handle well the corner cases. In practice, this model worked well on scanned invoices so we have decided to stick with it.
 As stated before, [CRAFT](https://github.com/RubanSeven/CRAFT_keras) was the state-of-the-art at the time we were working on the project, this method can be implmented using current state-of-the-art models.
