@@ -13,7 +13,7 @@ theme = "FeelIt"
   # site description
   description = "Younes Belkada's blog"
   # site keywords
-  keywords = ["Theme", "Hugo"]
+  keywords = ["Theme", "Hugo", "Younes Belkada"]
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
@@ -25,11 +25,11 @@ theme = "FeelIt"
 
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
-    title = "FeelIt"
+    title = "Younes Belkada"
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = ""
+    svgFavicon = "favicon.ico"
     # Android browser theme color
     themeColor = "#ffc40d"
     # Safari mask icon color
