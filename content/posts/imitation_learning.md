@@ -9,8 +9,8 @@ weight: 10
 tags: ["Explanation", "Reinforcement Learning", "Deep Learning", "Imitation Learning"]
 categories: ["Posts"]
 comment: false
-featuredImage: /images/posts/robot-reading.webp
-featuredImagePreview: /images/posts/robot-reading.webp
+featuredImage: /images/posts/robot-reading.png
+featuredImagePreview: /images/posts/robot-reading.png
 lightgallery: true
 ---
 
@@ -48,9 +48,36 @@ In practice, this algorithm is not that robust. This is due to the fact that the
 
 ### 2. Imitation learning in practice
 
-Let us consider that we are evolving in an enviornment where we get a reward at each state and we have a predefined finite set of actions. Let us also assume that it is really hard to design an accurate reward function due to the various possbility of sets.
+Let us consider that we are evolving in an enviornment where we get a reward at each state and we have a predefined finite set of actions. Let us also assume that it is **really hard** to design an accurate reward function due to the various possbility of sets.
 
 {{< image src="/images/posts/il_scheme.png" caption="In Reinforcement Learning, you learn to make good sequence of decisions" height="1000" width="1000" title="Original Content">}}
 
-#### 2.1 Analogies
+#### 2.1 Behavioural Cloning
 
+As described in this example above (Original content), the reward function is really hard to design manually as the environment is extremely stochastic, i.e. the lion's behaviour is really unpredicatble. 
+
+To tackle this issue, the *IL* aims at collecting a training data from an *expert* beforehand. In our scenario, we can imagine that a lion expert will demonstrate how to deal with the environment and we will collect all the records of the scenarios that happened to build a training dataset.
+
+{{< image src="/images/posts/analogy_il.png" caption="The expert demonstrates how to deal with the environment" height="1000" width="1000" title="Original Content">}}
+
+After getting the training data, we can learn an optimal **policy** by doing supervised learning on the obtain pairs of states and actions.
+
+This typical scenario is called **Behavioural Cloning** as explained before. But this has some limitations:
+* The collected training data is considered to be a set of i.i.d samples (each state is independent between each other). Which is in practice, not the case.
+* *What if the agent follows a set of paths that the expert did not encountered?* This can easily lead to exploring unknown states, and to lead to catastrophic failures
+
+#### 2.2 Towards more accurate training data
+
+What if we can access to our expert's feedbacks in real time while training our model? That is the main idea behind *Direct Policy Learning via Interactive Demonstrator*. Let us assume we already have in our bag the training data collected from our lion's expert. 
+
+{{< image src="/images/posts/irdl.png" caption="Direct Policy Learning pipeline" title="Source: https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c" height="400" width="400" title="Original Content">}}
+
+Basilcally from the initial training data:
+1. We train our agent on it in order to get the first optimal policy
+2. We run the policy on the environement in order to get the new observations
+3. Ask our expert to label the new observations (feedbacks)
+4. Combine both datasets and repeat the steps *1-4* until convergence
+
+{{< image src="/images/posts/analogy_il_2.png" caption="The expert augments the initial dataset until convergence with his feedbacks" height="1000" width="1000" title="Original Content">}}
+
+By applying this technique, the agent will not suffer from the issues faced with Behavioural Cloning. But this has a price, it is really hard to have a real-time feedback from an expert (a human) while training the model. Also in some cases the concept of expert can be hard to define.
