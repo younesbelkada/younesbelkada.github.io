@@ -64,6 +64,30 @@ $$ \begin{array}{l}V_1\ =\ \left[1,\ 10,\ 10,\ 10\right]\\\\\\ \pi^* =\ \left\\\
 
 Which absolutely makes sense, because in this MDP, to reach an optimal reward value you should avoid moving to the state $s_0$ and move to $s_3$ whenever you can.
 
-### Theorem
+# Policy Iteration
 
-Thankfully, we have a guarantee that the algorithm will give us a solution in some fixed number of steps.
+Policy iteration is another algorithm to find the optimal policy when the transition probabilities and the reward function are known, the configuration of the problem is the same as before.
+
+Instead of starting with an arbitraty Value function, we start the algorithm with an arbitrary policy $ \pi_0 $.
+
+{{< admonition Abstract "Description of the algorithm" true >}}
+1. start the algorithm with an arbitrary policy $ \pi_0 $
+2. For each $k = 1,...,N$:
+    1. Compute the Value Function associated with $\pi_k$ using the Bellman operator
+    2. Compute the greedy policy $$ \pi_{k+1} \in arg max [r(s, a) + \gamma \sum_{s'} p(s' | s, a) V^{\pi_k} (s')] $$
+3. Stop if $V^{\pi_k} = V^{\pi_{k-1}} $
+{{< /admonition >}}
+
+The main difference here is that for each step, the policy is supposed to be known. We can use the explicit Bellman Operator to calculate at each step the Value Function associated with the policy. Also, the policy is updated at each iteration where on the Value Iteration it is explicitly computed at the end of the algorithm.
+
+This can be done only if the transition probabilities are known beforehand. What if we do not have access to them? The agent needs to **learn by its own experience**.
+
+# Monte Carlo for Policy Evaluation
+
+Assume we have a fixed policy $\pi$. We can estimate the value function empirically, by executing (from the same initial state) $n$ trajectories and estimating the Value function using:
+
+$$
+\hat{V_n (s_0)} = \frac{1}{n} \sum^{n}_{i=1} \hat{R_i} (s_0)
+$$
+
+With $\hat{R_i} (s_0)$ corresponding to the estimated reward of the trajectory $i$. A theorem ensures that the Monte Carlo estimator converges to the Value Function.

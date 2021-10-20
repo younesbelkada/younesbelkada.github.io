@@ -148,3 +148,5 @@ When the policy is ***unknown*** we use the following formula to compute each co
 $
 \mathcal{T} W(s)=\max \_{a \in A}\left[r(s, a)+\gamma \sum_{s^{\prime}} p\left(s^{\prime} \mid s, a\right) W(s)\right]
 $
+
+As you can see, the formula of the Bellman equation is*recursive*. In practice, this is computed and solved using *dynamic programming*.
