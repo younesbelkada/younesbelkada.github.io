@@ -14,13 +14,13 @@ featuredImagePreview: /images/posts/robot-reading.png
 lightgallery: true
 ---
 
-Here is my attempt to explain the notions and intuitions behind *Imitation Learning* with the best of my knowledge. Credits to this very nice [blog](https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c) where I have learned most of the thigs that I have understood about the concept, and to this [website](https://www.stateofdigital.com/we-need-to-write-for-robots-until-they-read-like-people-why-our-industry-needs-technical-content-creators/) for the image above. Now let's directly dive in.
+Here is my attempt to explain the notions and intuitions behind *Imitation Learning* with the best of my knowledge. Credits to this very nice [blog](https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c) where I have learned most of the things that I have understood about the concept, and to this [website](https://www.stateofdigital.com/we-need-to-write-for-robots-until-they-read-like-people-why-our-industry-needs-technical-content-creators/) for the image above. Now let's directly dive in.
 
 ### 1. Brief intuitions
 
 {{< image src="/images/posts/imitation_learning_1.png" caption="In Reinforcement Learning, you learn to make good sequence of decisions" height="400" width="400" title="Source: http://web.stanford.edu/class/cs234/slides/lecture1.pdf">}}
 
-The field of Reinforcement Learning is an area of machine learning where an *intelligent* agent interacts with an environement in order to learn a policy (i.e. a set of *rules*) that maximizes the rewards given by the environement. More details can be found on the [course notes](https://younesbelkada.github.io/notes/rl1/) that I have took on the Reinforcement Learning class that I am currently following. 
+The field of Reinforcement Learning is an area of machine learning where an *intelligent* agent interacts with an environment in order to learn a policy (i.e. a set of *rules*) that maximizes the rewards given by the environment. More details can be found on the [course notes](https://younesbelkada.github.io/notes/rl1/) that I have took on the Reinforcement Learning class that I am currently following. 
 
 #### 1.1 How to find the best policy in RL?
 
@@ -28,13 +28,13 @@ There are several algorithms and learning methods in order to *learn* the best *
 
 #### 1.2 Why Imitation Learning?
 
-This can be extremely complex in some scenarios (e.g. self-driving cars) where the environement can get extremely complex, thus the reward function really hard to design manually. Here comes *Imitation Learning* (IL) to solve this issue. I am quoting below a very clear explanation of IL from the [blog](https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c) I am referring.
+This can be extremely complex in some scenarios (e.g. self-driving cars) where the environment can get extremely complex, thus the reward function really hard to design manually. Here comes *Imitation Learning* (IL) to solve this issue. I am quoting below a very clear explanation of IL from the [blog](https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c) I am referring.
 
 {{< admonition type=quote title="Quote from the blog" open=true >}}
 In IL instead of trying to learn from the sparse rewards or manually specifying a reward function, an expert (typically a human) provides us with a set of demonstrations.
 {{< /admonition >}}
 
-It is now very obvious why *Imitation Learning* is called so. An agent learns by imitating an expert that shows the *correct* behaviour on the environement.
+It is now very obvious why *Imitation Learning* is called so. An agent learns by imitating an expert that shows the *correct* behavior on the environment.
 
 #### 1.3 Different types of algorithms
 
@@ -48,13 +48,13 @@ In practice, this algorithm is not that robust. This is due to the fact that the
 
 ### 2. Imitation learning in practice
 
-Let us consider that we are evolving in an enviornment where we get a reward at each state and we have a predefined finite set of actions. Let us also assume that it is **really hard** to design an accurate reward function due to the various possbility of sets.
+Let us consider that we are evolving in an environment where we get a reward at each state and we have a predefined finite set of actions. Let us also assume that it is **really hard** to design an accurate reward function due to the various possibility of sets.
 
 {{< image src="/images/posts/il_scheme.png" caption="In Reinforcement Learning, you learn to make good sequence of decisions" height="1000" width="1000" title="Original Content">}}
 
 #### 2.1 Behavioural Cloning
 
-As described in this example above (Original content), the reward function is really hard to design manually as the environment is extremely stochastic, i.e. the lion's behaviour is really unpredicatble. 
+As described in this example above (Original content), the reward function is really hard to design manually as the environment is extremely stochastic, i.e. the lion's behavior is really unpredictable. 
 
 To tackle this issue, the *IL* aims at collecting a training data from an *expert* beforehand. In our scenario, we can imagine that a lion expert will demonstrate how to deal with the environment and we will collect all the records of the scenarios that happened to build a training dataset.
 

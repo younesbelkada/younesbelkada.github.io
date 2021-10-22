@@ -87,7 +87,10 @@ This can be done only if the transition probabilities are known beforehand. What
 Assume we have a fixed policy $\pi$. We can estimate the value function empirically, by executing (from the same initial state) $n$ trajectories and estimating the Value function using:
 
 $$
-\hat{V_n (s_0)} = \frac{1}{n} \sum^{n}_{i=1} \hat{R_i} (s_0)
+\hat{V_n} (s_0) = \frac{1}{n} \sum^{n}_{i=1} \hat{R_i} (s_0)
 $$
 
-With $\hat{R_i} (s_0)$ corresponding to the estimated reward of the trajectory $i$. A theorem ensures that the Monte Carlo estimator converges to the Value Function.
+With $\hat{R_i} (s_0)$ corresponding to the estimated reward of the trajectory $i$. A theorem ensures that the Monte Carlo estimator converges to the Value Function. 
+
+# Temporal Difference Learning
+
