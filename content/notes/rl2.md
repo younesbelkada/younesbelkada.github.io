@@ -119,24 +119,3 @@ $$
 
 This is done for each episode (i.e. each predicted trajectory)
 
-## Policy Learning
-
-### SARSA
-
-**How do we learn the best policy??** A family of methods that can be used is called *Actor-Critic methods*. 
-
-{{< image src="/images/notes/rl-actor-critic.png" caption="Actor Critic methods" height="500" width="500">}}
-
-The idea here is that the two components act between each other, at each iteration $k$ the Critic *evaluates* the policy $\pi^k$ and the Actor *improves* the policy by acting greedily.
-
-The Critic will use the TD learning to update the estimated Value function (or Q-function)
-
-$$
-\delta_{t}=r_{t}+\gamma \widehat{Q}\left(s_{t+1}, a_{t+1}\right)-\widehat{Q}\left(s_{t}, a_{t}\right)
-$$
-
-$$
-\widehat{Q}\left(s_{t}, a_{t}\right)=\widehat{Q}\left(s_{t}, a_{t}\right)+\alpha\left(s_{t}, a_{t}\right) \delta_{t}
-$$
-
-### Q-learning
