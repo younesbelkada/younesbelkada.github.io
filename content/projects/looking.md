@@ -26,5 +26,4 @@ We come up with several contributions, including the release in the following we
 
 ### Implementation & paper
 
-To be released soon !
-
+A detailed presentation of the method, as well as the open source code is available [here](https://looking-vita-epfl.github.io/).
