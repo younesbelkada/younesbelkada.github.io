@@ -62,4 +62,4 @@ Alice and Bob needs first to agree on the same Language Model and on the same pr
 
 # Code
 
-The interactive code is available online [here](https://github.com/younesbelkada/stego_ml) as well as the report that can be found [here](/file/MLCourse_2.pdf)
+The interactive code is available online [here](https://github.com/younesbelkada/stego_ml) as well as the report that can be found [here](https://www.epfl.ch/labs/mlo/wp-content/uploads/2021/05/crpmlcourse-paper822.pdf)
