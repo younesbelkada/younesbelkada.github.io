@@ -4,7 +4,7 @@ date: 2022-01-16
 type:
 - post 
 - posts
-title: "Mastering Natural Language Processing #1 - Words as vectors"
+title: "Mastering Natural Language Processing - Words as vectors"
 weight: 10
 tags: ["Journal", "Word Embeddings", "Deep Learning", "NLP"]
 categories: ["Posts"]
@@ -13,8 +13,6 @@ featuredImage: /images/posts/nlp_1.png
 featuredImagePreview: /images/posts/nlp_1.png
 lightgallery: true
 ---
-
-This is my first post in 2022! For this year I have decided to learn as much as I can about *Natural Language Processing* (NLP) and be able to master the notions and techniques around NLP.
 
 ## Why NLP is so exciting?
 
