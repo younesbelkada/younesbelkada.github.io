@@ -25,3 +25,7 @@ Basically given a **generated** face image from a random gaussian noise, Interfa
 ### Code
 
 The code of our work is publicly available on GitHub, on [this link](https://github.com/younesbelkada/interfacegan). You can easily play with the Colab Notebook to generate your own custom faces.
+
+### Technical explanations
+
+Coming soon!
